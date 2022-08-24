@@ -332,10 +332,17 @@ footer > div{
     .pop-cat-imgs-container{
         padding: 1em 0;
     }
+    
+    .pop-cat-imgs-container > div{
+        display: grid !important;
+        gap: 0.3em;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    }
 
     .category{
         padding: 0;
         min-height: 200px;
+        max-height: 200px;
     }
 
     .category > img{
@@ -345,12 +352,6 @@ footer > div{
     .category-img-text {
         margin: 0;
         width: 100%;
-    }
-
-    .pop-cat-imgs-container > div{
-        display: grid !important;
-        gap: 0.3em;
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     }
 
     /* recent images */

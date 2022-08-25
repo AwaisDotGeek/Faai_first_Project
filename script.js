@@ -108,3 +108,64 @@ navOneToggler.addEventListener('click', function(){
     }
     isNavOneTogglerExpanded = navOneToggler.getAttribute('aria-expanded');
 });
+
+// -------------------------------------------------------------------
+
+// Dealing with featured artists cards
+function showPossibleCards(){
+    var cards = document.querySelectorAll('.my-card');
+    var screenWidth = window.innerWidth;
+
+    if(screenWidth > 1200){
+        for(var i = 0; i < cards.length; i++){
+            cards[i].style.display = 'grid';
+            cards[i].style.width = '20%';
+        }
+    } else if(screenWidth < 1200 && screenWidth > 980){
+        for(var i = 0; i < cards.length; i++){
+            cards[i].style.display = 'grid';
+            cards[i].style.width = '20%';
+        }
+    } else if (screenWidth < 980 && screenWidth > 800){
+        for(var i = 0; i < 3; i++){
+            cards[i].style.display = 'grid';
+        }
+        for(var i = 3; i < cards.length; i++){
+            cards[i].style.display = 'none';
+        }
+        for(var i = 0; i < 3; i++){
+            cards[i].style.width = '25%';
+        }
+    } else if (screenWidth < 800 && screenWidth > 650){
+        for(var i = 0; i < 2; i++){
+            cards[i].style.display = 'grid';
+        }
+        for(var i = 2; i < cards.length; i++){
+            cards[i].style.display = 'none';
+        }
+        for(var i = 0; i < 3; i++){
+            cards[i].style.width = '35%';
+        }
+    } else {
+        for(var i = 1; i < cards.length; i++){
+            cards[i].style.display = 'none';
+        }
+        for(var i = 0; i < 3; i++){
+            cards[i].style.width = '80%';
+        }
+    }
+
+    if(screenWidth <= 450){
+        var cardsContainer = document.querySelector('.cards');
+        cardsContainer.style.padding = "1em 0.2em";
+    } else {
+        var cardsContainer = document.querySelector('.cards');
+        cardsContainer.style.padding = "1.5em 3em";
+    }
+}
+
+showPossibleCards();
+
+myBody.onresize = function(){
+    showPossibleCards();
+}

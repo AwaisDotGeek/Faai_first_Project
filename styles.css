@@ -21,7 +21,7 @@ body, html
 
 .active-link{
     color: white !important;
-    border-left: 5px solid red;
+    border-left: 5px solid #e20a14;
 }
 
 .navbar-brand-container{
@@ -80,7 +80,7 @@ button.navbar-toggler {
 }
 
 #home-page-search-form > button {
-    background: linear-gradient(90deg, red, darkred, darkred);
+    background: linear-gradient(90deg, #e20a14, #71050a);
     color: white;
     border: none;
     width: 70px;
@@ -111,7 +111,7 @@ button.navbar-toggler {
     margin: 0 10px;
 }
 .nav-2-link-container:hover{
-    background: linear-gradient(90deg, red, darkred);
+    background: linear-gradient(90deg, #e20a14, #71050a);
     border-radius: 30px;
     color: white;
 }
@@ -165,6 +165,99 @@ button.navbar-toggler {
 
     font-family: 'Montserrat';
     font-size: 19;
+}
+
+/* Featured Artists */
+#featured-artists-profiles-container{
+    width: 100%;
+    background-color: #F0F2F3;
+}
+.cards{
+    padding: 1.5em 3em;
+    display: flex;
+    justify-content: space-between;
+}
+.my-card {
+    background-color: white;
+    border-radius: 5px;
+    height: 300px;
+    width: 22%;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 1fr 2fr;
+    position: relative;
+    padding: 5px;
+}
+
+.img-section {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4px;
+}
+
+.img-section>img {
+    height: 100% !important;
+    border-radius: 5px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 0.8em;
+
+}
+
+.info-section>a {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+
+.info-section>a:hover {
+    color: #e20a14;
+}
+
+.info-section>.btn {
+    background-color: transparent;
+    color: #2053fb;
+    border: 2px solid #2053fb;
+    border-radius: 30px;
+    width: 90%;
+    padding: 0.25em 0;
+    font-size: 18px;
+    margin-top: 1em;
+}
+
+.profile-img {
+    background-color: white;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 20%;
+    left: 50%;
+    margin-left: -40px;
+    padding: 4px;
+}
+
+.profile-img>a>img {
+    height: 100% !important;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile-img>a:hover {
+    opacity: 0.8;
+}
+
+.left-right-btn{
+    background-color: transparent;
+    width: 60px;
+    border: none;
+    color: #e20a14;
 }
 
 /* Recent images */
@@ -274,8 +367,8 @@ footer > div{
 
     .active-link {
         color: white !important;
-        border-left: 5px solid red;
-        border-right: 5px solid red;
+        border-left: 5px solid #e20a14;
+        border-right: 5px solid #e20a14;
     }
 
     /* title img  */
@@ -332,17 +425,10 @@ footer > div{
     .pop-cat-imgs-container{
         padding: 1em 0;
     }
-    
-    .pop-cat-imgs-container > div{
-        display: grid !important;
-        gap: 0.3em;
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-    }
 
     .category{
         padding: 0;
         min-height: 200px;
-        max-height: 200px;
     }
 
     .category > img{
@@ -352,6 +438,12 @@ footer > div{
     .category-img-text {
         margin: 0;
         width: 100%;
+    }
+
+    .pop-cat-imgs-container > div{
+        display: grid !important;
+        gap: 0.3em;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     }
 
     /* recent images */
@@ -410,8 +502,8 @@ footer > div{
 
     .active-link {
         color: white !important;
-        border-left: 5px solid red;
-        border-right: 5px solid red;
+        border-left: 5px solid #e20a14;
+        border-right: 5px solid #e20a14;
     }
 
     /* title img  */
@@ -513,8 +605,8 @@ footer > div{
 
     .active-link {
         color: white !important;
-        border-left: 5px solid red;
-        border-right: 5px solid red;
+        border-left: 5px solid #e20a14;
+        border-right: 5px solid #e20a14;
     }
 
     /* title img  */
